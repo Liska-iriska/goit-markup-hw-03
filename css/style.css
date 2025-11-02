@@ -102,6 +102,7 @@ body {
 }
 
 .logo {
+    display: flex;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
@@ -209,10 +210,11 @@ body {
 
 .our-team {
     background-color: #f4f4fd;
+    padding: 120px 0;
 }
 
 .team-member {
-    padding: 120px 0;
+
     display: flex;
     gap: 24px;
 }
