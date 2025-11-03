@@ -15,7 +15,8 @@ p {
     padding: 0;
 }
 
-li {
+li,
+ul {
     margin: 0;
     padding-left: 0;
 }
@@ -24,6 +25,7 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
+    padding: 0;
 }
 
 body {
@@ -35,21 +37,24 @@ body {
     background-color: #ffffff;
 }
 
-.header {
-    width: 100%;
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #fff;
     border-bottom: 1px solid #e7e9fc;
 }
 
-.nav {
+.header .container {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 
 .nav-list {
     display: flex;
     gap: 40px;
+    padding-left: 0px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -64,7 +69,6 @@ body {
 .nav-list-link {
     color: #2e2f42;
     text-decoration: none;
-    padding: 24px 0;
 }
 
 .nav-list-link:hover,
@@ -155,6 +159,9 @@ body {
 }
 
 .h-one {
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
     max-width: 496px;
     font-weight: 700;
     font-size: 56px;
@@ -185,6 +192,20 @@ body {
     text-align: center;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+
 .about-us {
     padding: 120px 0;
     display: flex;
@@ -196,8 +217,8 @@ body {
     gap: 24px;
 }
 
-.about-us-list-p {
-    width: calc((100% - 72px) / 4);
+.about-us-list .about-us-li {
+    flex-basis: calc((100% - 3 * 24px) / 4);
 }
 
 .about-us-p {
@@ -214,20 +235,22 @@ body {
 }
 
 .team-member {
-
     display: flex;
     gap: 24px;
 }
 
 .member-info {
-
     padding: 32px 0;
 }
 
+.team-member .team-member-field {
+    flex-basis: calc((100% - 3 * 24px) / 4);
+}
+
 .team-member-field {
+
     border-radius: 0px 0px 4px 4px;
     background-color: #ffffff;
-    width: calc((100% - 72px) / 4);
 }
 
 .our-team-p {
@@ -241,6 +264,22 @@ body {
 
 .our-portfolio {
     background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 0;
+
+}
+
+.our-portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+}
+
+.our-portfolio-list .our-portfolio-field {
+    width: calc((100% - 48px) / 3);
 }
 
 .our-portfolio-p {
@@ -251,11 +290,20 @@ body {
     color: #434455;
 }
 
+.div-app {
+    padding: 32px 16px;
+    border: 1px solid #e7e9fc;
+    border-top: none;
+}
+
 .footer {
+    padding: 100px 0;
     background-color: #2e2f42;
 }
 
 .footer-p {
+    width: 264px;
+    height: 72px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
@@ -264,6 +312,8 @@ body {
 }
 
 .footer .logo {
+    margin-bottom: 16px;
+    display: inline-block;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
@@ -288,15 +338,4 @@ body {
     width: 1158px;
     padding: 0 15px;
     margin: 0 auto;
-}
-
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
 }
