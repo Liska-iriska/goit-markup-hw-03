@@ -71,6 +71,7 @@ body {
 }
 
 .nav-list-link {
+    display: block;
     padding: 24px 0;
     color: #2e2f42;
     text-decoration: none;
